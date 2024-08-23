@@ -12,20 +12,17 @@ entry.place(relx=0.05, rely=0.05)
 
 
 def onClick(number):
-    global numbers1, numbers2
+    
     getEntry = entry.get()
     print(getEntry)
     entry.config(state="normal")
     entry.delete(0, tk.END)
     entry.insert(0, getEntry+str(number))
     entry.config(state="disabled")
-   
-   
 
 
 
 def calculate(calculation):
-    global useFirstList, useSecondList
     getEntry = entry.get()
     entry.config(state="normal")
     entry.delete(0, tk.END)
@@ -101,9 +98,6 @@ def clear():
     entry.delete(0, tk.END)
     entry.config(state="disabled")
 
-    numbers1.clear()
-    numbers2.clear()
-    calculations.clear()
 
 # First row
 Button7 = tk.Button(root, text="7", font=("Arial", 45), width=3, command=onClick7)
